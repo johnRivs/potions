@@ -2,9 +2,12 @@
 Minimal Gulp wrapper. 
 
 #### How to use
-1. `npm install potions --save-dev`
-2. Create a `gulpfile.js` file and `require('potions')` within it.
-3. Here's a sample config:
+1. Install [Gulp](http://gulpjs.com/).
+2. `npm install potions --save-dev`.
+3. Create a `gulpfile.js` file and `require('potions')` within it.
+4. Run `gulp`.
+
+Here's a sample config:
 ```js
 var potions = require('potions');
 
