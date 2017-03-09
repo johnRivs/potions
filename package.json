@@ -1,0 +1,18 @@
+{
+  "name": "potions",
+  "version": "0.0.1",
+  "description": "Minimal Gulp wrapper.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "John Rivs",
+  "license": "ISC",
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8"
+  }
+}
