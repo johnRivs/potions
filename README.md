@@ -4,26 +4,17 @@ Minimal Gulp wrapper.
 #### How to use
 1. Install [Gulp](http://gulpjs.com/).
 2. `npm install potions --save-dev`.
-3. Create a `gulpfile.js` file and `require('potions')` within it.
-4. Run `gulp`.
+3. Create a `gulpfile.js` file, `require('potions')` and define your tasks.
+4. Run `gulp` in the terminal.
 
 Here's a sample config:
 ```js
 var potions = require('potions');
 
-potions({
-    sass: [
-        {
-            input: ['app.scss'],
-            output: 'app.css'
-        }
-    ],
-    styles: [
-        {
-            input: ['vendor/library.css'],
-            output: 'vendor.css'
-        }
-    ]
+potions(mix => {
+    mix.js(['app.js'], 'app.js') // ES2015 transpiling and CommonJS/ES2015 module bundling
+       .sass(['app.scss'], 'app.css') // Autoprefix and compile Sass
+       .styles(['vendor/library-a.css','vendor/library-b.css'], 'vendor.css'); // Concatenate and autoprefix CSS files
 });
 ```
 
@@ -32,8 +23,8 @@ potions({
 - ~~Sass~~
 - Javascript
 - File versioning
-- Bublé
-- Rollup
+- ~~Bublé~~
+- ~~Rollup~~
 - Vue.js
 - SVG
 - Browsersync

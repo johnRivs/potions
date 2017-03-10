@@ -8,11 +8,19 @@ config.sass.forEach((style, key) => {
     });
 });
 
+config.js.forEach((style, key) => {
+    config.js[key].input = config.js[key].input.map(filename => {
+        let prefix = config.js[key].prefix || '';
+
+        return `${config.paths.root}/${config.paths.js}/${prefix}${filename}`;
+    });
+});
+
 config.styles.forEach((style, key) => {
     config.styles[key].input = config.styles[key].input.map(filename => {
         let prefix = config.styles[key].prefix || '';
 
-        return `${config.paths.root}/${config.paths.css}/${prefix}${filename}`;
+        return `${config.paths.root}/${config.paths.styles}/${prefix}${filename}`;
     });
 });
 

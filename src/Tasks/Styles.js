@@ -28,6 +28,6 @@ module.exports = () => {
         if (config.sourcemaps) src = src.pipe(sourcemaps.write());
 
         // Save output
-        src.pipe(gulp.dest(`${config.paths.output}/${config.paths.css}`));
+        src.pipe(gulp.dest(`${config.paths.output}/${config.paths.styles}`));
     });
 };

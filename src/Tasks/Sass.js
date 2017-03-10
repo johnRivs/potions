@@ -32,6 +32,6 @@ module.exports = () => {
         src = src.pipe(rename(sass.output));
 
         // Save output
-        src.pipe(gulp.dest(`${config.paths.output}/${config.paths.css}`));
+        src.pipe(gulp.dest(`${config.paths.output}/${config.paths.styles}`));
     });
 };

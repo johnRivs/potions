@@ -1,20 +1,20 @@
 var util       = require('gulp-util'),
     production = util.env.production;
 
-let config = {
+module.exports = {
     sourcemaps: ! production,
     minify:     production,
     version:    false,
     paths: {
-        root:   'resources/assets',
-        output: 'public',
-        css:    'css',
-        sass:   'scss',
-        js:     'js'
+        root:    'resources/assets',
+        output:  'public',
+        styles:  'css',
+        js:      'js',
+        sass:    'scss',
+        scripts: 'js'
     },
     sass:    [],
+    js:      [],
     styles:  [],
     scripts: []
 };
-
-module.exports = config;
